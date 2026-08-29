@@ -91,6 +91,28 @@ export default function Header() {
         >
           Contact
         </a>
+        <a
+          href="/resume"
+          style={{
+            color: theme === "dark" ? "#d7d7e0" : "#1a1a1f",
+            textDecoration: "none",
+            fontSize: "0.95rem",
+            transition: "color 0.3s",
+          }}
+        >
+          Resume
+        </a>
+        <a
+          href="/cover-letter"
+          style={{
+            color: theme === "dark" ? "#d7d7e0" : "#1a1a1f",
+            textDecoration: "none",
+            fontSize: "0.95rem",
+            transition: "color 0.3s",
+          }}
+        >
+          Cover Letter
+        </a>
 
         {/* Theme Toggle */}
         <button

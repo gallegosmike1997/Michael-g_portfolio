@@ -1,16 +1,108 @@
-# React + Vite
+# Michael Gallegos — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the source code for my engineering portfolio built with **Next.js**, showcasing my work across software development, robotics, embedded systems, AI integration, CAD design, and 3D printing.
 
-Currently, two official plugins are available:
+## 📂 Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+michael-g-portfolio-next/          # Main Next.js application
+├── src/
+│   ├── app/                        # Next.js App Router pages
+│   │   ├── page.tsx               # Home page
+│   │   ├── resume/
+│   │   ├── cover-letter/
+│   │   └── globals.css            # Global styles
+│   ├── components/                 # Reusable React components
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Section.tsx
+│   │   ├── Card.tsx
+│   │   └── Footer.tsx
+│   ├── sections/                   # Page sections
+│   │   ├── Software.tsx
+│   │   ├── Robotics.tsx
+│   │   ├── Embedded.tsx
+│   │   ├── Additive.tsx
+│   │   ├── AI.tsx
+│   │   ├── Systems.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Roadmap.tsx
+│   │   ├── Contact.tsx
+│   │   └── About.tsx
+│   └── theme/
+│       ├── ThemeContext.tsx        # Dark/Light theme provider
+│       └── colors.ts              # Color palette
+├── public/                         # Static assets
+└── package.json
+```
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd michael-g-portfolio-next
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
+## 🎨 Features
+
+- **Dark/Light Theme Toggle** — Context-based theme switching with persistent storage
+- **Smooth Animations** — Framer Motion for fade-in and slide-up effects
+- **Responsive Design** — Mobile-optimized layout
+- **TypeScript** — Type-safe components
+- **Static Pages** — Resume and Cover Letter routes
+
+## 🛠️ Technology Stack
+
+- **Framework:** Next.js 16 with TypeScript
+- **Styling:** CSS (with Tailwind CSS support)
+- **Animations:** Framer Motion
+- **State Management:** React Context API
+- **Build Tool:** Turbopack
+
+## 📄 Pages
+
+- **Home** (`/`) — Portfolio overview with all sections
+- **Resume** (`/resume`) — Professional resume
+- **Cover Letter** (`/cover-letter`) — Cover letter
+
+## 🧹 Repository Cleanup
+
+The old Vite/React project files have been removed. This directory now only contains:
+- `michael-g-portfolio-next/` — The active Next.js application
+- `.git/` — Version control
+- `.gitignore` — Git configuration
+- `README.md` — This file
+
+To remove the lingering `node_modules/` folder on Windows, run:
+```powershell
+Remove-Item node_modules -Recurse -Force
+```
+
+Or use an external tool if permissions are restricted.
+
+## 📧 Contact
+
+Email: [your-email@example.com](mailto:your-email@example.com)  
+Location: Colorado Springs, CO  
+Portfolio: [This site](https://michael-gallegos.dev)
