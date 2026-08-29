@@ -22,31 +22,18 @@ export default function ResumePage() {
         >
           <h1
             style={{
-              fontSize: "2.2rem",
-              marginBottom: "8px",
-              fontWeight: "700",
+              fontSize: "3.5rem",
+              marginBottom: "0",
+              fontWeight: "800",
               letterSpacing: "0.05em",
+              background: "linear-gradient(135deg, #c9a46b 0%, #d7d7e0 100%)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
             }}
           >
-            Michael Gallegos
+            Resume
           </h1>
-          <p
-            style={{
-              fontSize: "1rem",
-              color: "var(--text-muted)",
-              marginBottom: "12px",
-            }}
-          >
-            Multi-Disciplinary Engineer
-          </p>
-          <p
-            style={{
-              fontSize: "0.9rem",
-              color: "var(--text-muted)",
-            }}
-          >
-            Colorado Springs, CO • Software • Robotics • Embedded Systems • AI • CAD • 3D Printing
-          </p>
         </div>
 
         <section

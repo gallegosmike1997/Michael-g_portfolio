@@ -19,26 +19,11 @@ export default function CoverLetterPage() {
         <div
           style={{
             marginBottom: "32px",
-            textAlign: "right",
             fontSize: "0.95rem",
             color: "var(--text-muted)",
           }}
         >
-          <p>Michael Gallegos</p>
-          <p>Colorado Springs, CO</p>
-          <p>Email: gallegosmike1997@gmail.com</p>
-          <p>Phone: (719) 673-5372</p>
-          <p>GitHub: https://github.com/gallegosmike1997</p>
-        </div>
-
-        <div
-          style={{
-            marginBottom: "32px",
-            fontSize: "0.95rem",
-            color: "var(--text-muted)",
-          }}
-        >
-          <p>Hello, I am Michael Gallegos.</p>
+          <p>Hello, I hope my portfolio finds you in good spirits.</p>
         </div>
 
         <section style={{ marginBottom: "24px" }}>

@@ -12,10 +12,13 @@ export default function Contact() {
 
         <ul>
           <li>
-            Email: <strong>your-email@example.com</strong>
+            Email: <strong>gallegosmike1997@gmail.com</strong>
           </li>
           <li>
-            GitHub: <strong>github.com/yourusername</strong>
+            Phone: <strong>(719) 673-5372</strong>
+          </li>
+          <li>
+            GitHub: <strong>https://github.com/gallegosmike1997</strong>
           </li>
           <li>Location: Colorado Springs, CO</li>
         </ul>
