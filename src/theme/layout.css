@@ -1,0 +1,197 @@
+/* ---------------------------------------------------------
+   GLOBAL RESET & BASE
+--------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ---------------------------------------------------------
+   DARK METALLIC THEME
+--------------------------------------------------------- */
+body[data-theme="dark"] {
+  background: radial-gradient(circle at top left, #1b0b16 0%, #050509 45%, #020203 100%);
+  color: #f5f5f7;
+}
+
+body[data-theme="dark"] section {
+  background: linear-gradient(145deg, #090910, #151520);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body[data-theme="dark"] .card {
+  background: radial-gradient(circle at top left, rgba(123, 30, 59, 0.25), rgba(5, 5, 9, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ---------------------------------------------------------
+   LIGHT PLATINUM THEME
+--------------------------------------------------------- */
+body[data-theme="light"] {
+  background: #e8e8f0;
+  color: #1a1a1f;
+}
+
+body[data-theme="light"] section {
+  background: #ffffff;
+  border: 1px solid #d0d0d8;
+}
+
+body[data-theme="light"] .card {
+  background: #fafafa;
+  border: 1px solid #d0d0d8;
+}
+
+/* ---------------------------------------------------------
+   SECTION BASE STYLING
+--------------------------------------------------------- */
+section {
+  margin: 32px auto;
+  padding: 24px;
+  max-width: 1100px;
+  border-radius: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------------
+   CARD STYLING
+--------------------------------------------------------- */
+.card {
+  padding: 16px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: cardIn 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Card slide-up animation */
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------------
+   TAGS
+--------------------------------------------------------- */
+.tag {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 5, 9, 0.7);
+  color: #d7d7e0;
+}
+
+/* Light theme tag override */
+body[data-theme="light"] .tag {
+  background: #ffffff;
+  color: #1a1a1f;
+  border: 1px solid #d0d0d8;
+}
+
+/* ---------------------------------------------------------
+   LINKS
+--------------------------------------------------------- */
+a {
+  color: #d7d7e0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #c9a46b;
+}
+
+body[data-theme="light"] a {
+  color: #1a1a1f;
+}
+
+body[data-theme="light"] a:hover {
+  color: #7b1e3b;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #a0a0b3;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+body[data-theme="light"] footer {
+  color: #3a3a45;
+  border-top: 1px solid #d0d0d8;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE DESIGN
+--------------------------------------------------------- */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+}
+
+/* ---------------------------------------------------------
+   SMOOTH INTERACTION FEEL
+--------------------------------------------------------- */
+button {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
