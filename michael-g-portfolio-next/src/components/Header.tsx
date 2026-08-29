@@ -37,7 +37,7 @@ export default function Header() {
             color: theme === "dark" ? "#d7d7e0" : "#1a1a1f",
           }}
         >
-          Michael
+          Michael Gallegos
         </h1>
         <p
           style={{
