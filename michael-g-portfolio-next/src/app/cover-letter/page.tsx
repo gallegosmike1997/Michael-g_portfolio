@@ -38,12 +38,12 @@ export default function CoverLetterPage() {
             color: "var(--text-muted)",
           }}
         >
-          <p>Dear Hiring Manager,</p>
+          <p>Hello, I am Michael Gallegos.</p>
         </div>
 
         <section style={{ marginBottom: "24px" }}>
           <p>
-            I am a multi-disciplinary engineer with a passion for designing and
+            I am a self taught multi-disciplinary engineer with a passion for designing and
             building complete systems. My experience spans full-stack software
             development, embedded systems, robotics, PCB design, AI integration,
             and mechanical engineering. I approach every project with a focus on
