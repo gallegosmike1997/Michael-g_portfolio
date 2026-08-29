@@ -1,108 +1,36 @@
-# Michael Gallegos — Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This is the source code for my engineering portfolio built with **Next.js**, showcasing my work across software development, robotics, embedded systems, AI integration, CAD design, and 3D printing.
+## Getting Started
 
-## 📂 Project Structure
-
-```
-michael-g-portfolio-next/          # Main Next.js application
-├── src/
-│   ├── app/                        # Next.js App Router pages
-│   │   ├── page.tsx               # Home page
-│   │   ├── resume/
-│   │   ├── cover-letter/
-│   │   └── globals.css            # Global styles
-│   ├── components/                 # Reusable React components
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Section.tsx
-│   │   ├── Card.tsx
-│   │   └── Footer.tsx
-│   ├── sections/                   # Page sections
-│   │   ├── Software.tsx
-│   │   ├── Robotics.tsx
-│   │   ├── Embedded.tsx
-│   │   ├── Additive.tsx
-│   │   ├── AI.tsx
-│   │   ├── Systems.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Roadmap.tsx
-│   │   ├── Contact.tsx
-│   │   └── About.tsx
-│   └── theme/
-│       ├── ThemeContext.tsx        # Dark/Light theme provider
-│       └── colors.ts              # Color palette
-├── public/                         # Static assets
-└── package.json
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-```bash
-cd michael-g-portfolio-next
-npm install
-```
-
-### Development
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Production Build
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```bash
-npm run build
-npm start
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🎨 Features
+## Learn More
 
-- **Dark/Light Theme Toggle** — Context-based theme switching with persistent storage
-- **Smooth Animations** — Framer Motion for fade-in and slide-up effects
-- **Responsive Design** — Mobile-optimized layout
-- **TypeScript** — Type-safe components
-- **Static Pages** — Resume and Cover Letter routes
+To learn more about Next.js, take a look at the following resources:
 
-## 🛠️ Technology Stack
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Framework:** Next.js 16 with TypeScript
-- **Styling:** CSS (with Tailwind CSS support)
-- **Animations:** Framer Motion
-- **State Management:** React Context API
-- **Build Tool:** Turbopack
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 📄 Pages
+## Deploy on Vercel
 
-- **Home** (`/`) — Portfolio overview with all sections
-- **Resume** (`/resume`) — Professional resume
-- **Cover Letter** (`/cover-letter`) — Cover letter
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🧹 Repository Cleanup
-
-The old Vite/React project files have been removed. This directory now only contains:
-- `michael-g-portfolio-next/` — The active Next.js application
-- `.git/` — Version control
-- `.gitignore` — Git configuration
-- `README.md` — This file
-
-To remove the lingering `node_modules/` folder on Windows, run:
-```powershell
-Remove-Item node_modules -Recurse -Force
-```
-
-Or use an external tool if permissions are restricted.
-
-## 📧 Contact
-
-Email: [your-email@example.com](mailto:your-email@example.com)  
-Location: Colorado Springs, CO  
-Portfolio: [This site](https://michael-gallegos.dev)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
