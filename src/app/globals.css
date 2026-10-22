@@ -157,6 +157,91 @@ body[data-theme="light"] footer {
 }
 
 /* ---------------------------------------------------------
+   PROJECT MEDIA UPLOADS
+--------------------------------------------------------- */
+.media-uploader {
+  display: grid;
+  gap: 24px;
+}
+
+.media-uploader h2 {
+  margin-top: 8px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.media-uploader p {
+  max-width: 680px;
+  color: #a0a0b3;
+}
+
+body[data-theme="light"] .media-uploader p {
+  color: #3a3a45;
+}
+
+.upload-dropzone {
+  display: grid;
+  gap: 8px;
+  padding: 28px;
+  border: 1px dashed rgba(201, 164, 107, 0.75);
+  border-radius: 14px;
+  cursor: pointer;
+  background: rgba(123, 30, 59, 0.12);
+}
+
+body[data-theme="light"] .upload-dropzone {
+  background: #fff8f0;
+  border-color: #7b1e3b;
+}
+
+.upload-dropzone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.upload-dropzone span,
+.media-card span {
+  color: #a0a0b3;
+  font-size: 0.9rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.media-card {
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.16);
+  padding-bottom: 10px;
+}
+
+.media-card img,
+.media-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.media-card span {
+  padding: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upload-message {
+  color: #c9a46b !important;
+}
+
+/* ---------------------------------------------------------
    RESPONSIVE DESIGN
 --------------------------------------------------------- */
 @media (max-width: 900px) {
