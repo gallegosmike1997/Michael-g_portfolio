@@ -14,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Michael — Multi-Disciplinary Engineer",
-  description: "Engineering portfolio: software, embedded, robotics, AI, CAD, 3D printing.",
+  title: "Michael Gallegos | AI Developer & Systems Engineer",
+  description: "Recruiter-ready engineering portfolio featuring AI software, embedded systems, robotics, automation, CAD, and manufacturing projects.",
+  keywords: ["AI developer", "systems engineer", "software engineer", "embedded systems", "robotics", "automation", "CAD", "manufacturing"],
+  authors: [{ name: "Michael Gallegos" }],
 };
 
 export default function RootLayout({

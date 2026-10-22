@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PortfolioOverview from "@/components/PortfolioOverview";
 import About from "@/sections/About";
 import Software from "@/sections/Software";
 import Robotics from "@/sections/Robotics";
@@ -20,6 +21,7 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
+        <PortfolioOverview />
         <About />
         <Software />
         <Robotics />

@@ -1,11 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { useContext } from "react";
 import { ThemeContext } from "../theme/ThemeContext";
 
 export default function Header() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
 
+  if (!themeContext) {
+    throw new Error("Header must be rendered inside ThemeProvider");
+  }
+
+  const { theme, toggleTheme } = themeContext;
   const isDark = theme === "dark";
 
   return (
@@ -25,9 +31,31 @@ export default function Header() {
           : "rgba(240,240,245,0.55)",
       }}
     >
-      {/* LEFT SIDE — NAME + TITLE */}
-      <div>
-        <h1
+      {/* LEFT SIDE — PHOTO, NAME + TITLE */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+        }}
+      >
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-dL8RzKxNj0yRnZBlTG037OqFba3qNJ.jpg"
+          alt="Michael Gallegos"
+          style={{
+            width: "64px",
+            height: "64px",
+            borderRadius: "50%",
+            objectFit: "cover",
+            objectPosition: "center 28%",
+            border: isDark ? "2px solid #c9a46b" : "2px solid #7b1e3b",
+            boxShadow: isDark
+              ? "0 4px 16px rgba(0,0,0,0.35)"
+              : "0 4px 16px rgba(0,0,0,0.18)",
+          }}
+        />
+        <div>
+          <h1
           style={{
             margin: 0,
             fontSize: "2.2rem",
@@ -48,6 +76,7 @@ export default function Header() {
         >
           Multi‑Disciplinary Engineer
         </p>
+        </div>
       </div>
 
       {/* RIGHT SIDE — NAVIGATION + THEME TOGGLE */}
@@ -59,8 +88,8 @@ export default function Header() {
           flexWrap: "wrap",
         }}
       >
-        <a
-          href="/splash"
+        <Link
+          href="/"
           style={{
             fontWeight: 600,
             color: isDark ? "#d7d7e0" : "#1a1a1f",
@@ -68,9 +97,9 @@ export default function Header() {
           }}
         >
           Home
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/cover-letter"
           style={{
             fontWeight: 600,
@@ -79,9 +108,9 @@ export default function Header() {
           }}
         >
           Cover Letter
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/resume"
           style={{
             fontWeight: 600,
@@ -90,9 +119,9 @@ export default function Header() {
           }}
         >
           Resume
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/projects"
           style={{
             fontWeight: 600,
@@ -101,9 +130,9 @@ export default function Header() {
           }}
         >
           Projects
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/contact"
           style={{
             fontWeight: 600,
@@ -112,7 +141,7 @@ export default function Header() {
           }}
         >
           Contact
-        </a>
+        </Link>
 
         {/* THEME TOGGLE BUTTON */}
         <button
