@@ -30,9 +30,31 @@ export default function Header() {
           : "rgba(240,240,245,0.55)",
       }}
     >
-      {/* LEFT SIDE — NAME + TITLE */}
-      <div>
-        <h1
+      {/* LEFT SIDE — PHOTO, NAME + TITLE */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+        }}
+      >
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-dL8RzKxNj0yRnZBlTG037OqFba3qNJ.jpg"
+          alt="Michael Gallegos"
+          style={{
+            width: "64px",
+            height: "64px",
+            borderRadius: "50%",
+            objectFit: "cover",
+            objectPosition: "center 28%",
+            border: isDark ? "2px solid #c9a46b" : "2px solid #7b1e3b",
+            boxShadow: isDark
+              ? "0 4px 16px rgba(0,0,0,0.35)"
+              : "0 4px 16px rgba(0,0,0,0.18)",
+          }}
+        />
+        <div>
+          <h1
           style={{
             margin: 0,
             fontSize: "2.2rem",
@@ -53,6 +75,7 @@ export default function Header() {
         >
           Multi‑Disciplinary Engineer
         </p>
+        </div>
       </div>
 
       {/* RIGHT SIDE — NAVIGATION + THEME TOGGLE */}
