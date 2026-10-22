@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useContext } from "react";
 import { ThemeContext } from "../theme/ThemeContext";
 
@@ -87,7 +88,7 @@ export default function Header() {
           flexWrap: "wrap",
         }}
       >
-        <a
+        <Link
           href="/"
           style={{
             fontWeight: 600,
@@ -96,9 +97,9 @@ export default function Header() {
           }}
         >
           Home
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/cover-letter"
           style={{
             fontWeight: 600,
@@ -107,9 +108,9 @@ export default function Header() {
           }}
         >
           Cover Letter
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/resume"
           style={{
             fontWeight: 600,
@@ -118,9 +119,9 @@ export default function Header() {
           }}
         >
           Resume
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/projects"
           style={{
             fontWeight: 600,
@@ -129,9 +130,9 @@ export default function Header() {
           }}
         >
           Projects
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/contact"
           style={{
             fontWeight: 600,
@@ -140,7 +141,7 @@ export default function Header() {
           }}
         >
           Contact
-        </a>
+        </Link>
 
         {/* THEME TOGGLE BUTTON */}
         <button
