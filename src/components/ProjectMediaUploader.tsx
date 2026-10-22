@@ -2,35 +2,33 @@
 
 import { ChangeEvent, useState } from "react";
 
-type UploadedMedia = { url: string; name: string; contentType: string };
+type UploadedMedia = { url: string; type: "image" | "video"; name: string };
 
 export default function ProjectMediaUploader() {
-  const [uploads, setUploads] = useState<UploadedMedia[]>([]);
-  const [isUploading, setIsUploading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [media, setMedia] = useState<UploadedMedia[]>([]);
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState("");
 
-  async function handleFiles(event: ChangeEvent<HTMLInputElement>) {
+  async function handleUpload(event: ChangeEvent<HTMLInputElement>) {
     const files = Array.from(event.target.files ?? []);
     if (!files.length) return;
-    setIsUploading(true);
-    setMessage("");
+    setUploading(true);
+    setError("");
 
     try {
-      const results: UploadedMedia[] = [];
-      for (const file of files) {
-        const formData = new FormData();
-        formData.append("file", file);
-        const response = await fetch("/api/project-media", { method: "POST", body: formData });
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.error ?? "Upload failed");
-        results.push(data);
-      }
-      setUploads((current) => [...results, ...current]);
-      setMessage(`${results.length} file${results.length === 1 ? "" : "s"} uploaded successfully.`);
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : "Upload failed. Try again.");
+      const uploads = await Promise.all(files.map(async (file) => {
+        const body = new FormData();
+        body.append("file", file);
+        const response = await fetch("/api/project-media/upload", { method: "POST", body });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error ?? "Upload failed.");
+        return result as UploadedMedia;
+      }));
+      setMedia((current) => [...current, ...uploads]);
+    } catch (uploadError) {
+      setError(uploadError instanceof Error ? uploadError.message : "Upload failed. Please try again.");
     } finally {
-      setIsUploading(false);
+      setUploading(false);
       event.target.value = "";
     }
   }
@@ -40,15 +38,15 @@ export default function ProjectMediaUploader() {
       <div>
         <div className="section-kicker">Project media</div>
         <h2 id="media-uploader-title">Add screenshots and screen recordings.</h2>
-        <p>Upload visual proof of your builds. Images and videos are stored in Vercel Blob and can be added to a case study.</p>
+        <p>Upload images up to 10MB or videos up to 250MB. Uploaded files are stored in Vercel Blob and can be used in project case studies.</p>
       </div>
       <label className="upload-dropzone">
-        <input type="file" accept="image/*,video/mp4,video/webm,video/quicktime" multiple onChange={handleFiles} disabled={isUploading} />
-        <strong>{isUploading ? "Uploading…" : "Choose screenshots or recordings"}</strong>
-        <span>JPG, PNG, WEBP, GIF, MP4, WEBM, or MOV · up to 250 MB each</span>
+        <input type="file" accept="image/*,video/*" multiple onChange={handleUpload} disabled={uploading} />
+        <strong>{uploading ? "Uploading media…" : "Choose files"}</strong>
+        <span>PNG, JPG, WEBP, MP4, MOV, or WEBM</span>
       </label>
-      {message && <p className="upload-message" role="status">{message}</p>}
-      {uploads.length > 0 && <div className="media-grid">{uploads.map((media) => <article className="media-card" key={media.url}>{media.contentType.startsWith("video/") ? <video src={media.url} controls preload="metadata" /> : <img src={media.url} alt={media.name} /> }<span>{media.name}</span></article>)}</div>}
+      {error && <p className="upload-error" role="alert">{error}</p>}
+      {media.length > 0 && <div className="media-grid">{media.map((item) => <figure className="media-card" key={item.url}>{item.type === "video" ? <video src={item.url} controls preload="metadata" /> : <img src={item.url} alt={item.name} />}<span>{item.name}</span></figure>)}</div>}
     </section>
   );
 }
