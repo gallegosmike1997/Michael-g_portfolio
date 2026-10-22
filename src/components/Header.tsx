@@ -4,8 +4,13 @@ import { useContext } from "react";
 import { ThemeContext } from "../theme/ThemeContext";
 
 export default function Header() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
 
+  if (!themeContext) {
+    throw new Error("Header must be rendered inside ThemeProvider");
+  }
+
+  const { theme, toggleTheme } = themeContext;
   const isDark = theme === "dark";
 
   return (
@@ -60,7 +65,7 @@ export default function Header() {
         }}
       >
         <a
-          href="/splash"
+          href="/"
           style={{
             fontWeight: 600,
             color: isDark ? "#d7d7e0" : "#1a1a1f",
