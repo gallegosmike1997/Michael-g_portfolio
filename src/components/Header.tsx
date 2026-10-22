@@ -1,19 +1,10 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../theme/ThemeContext";
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false);
   const themeContext = useContext(ThemeContext);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   if (!themeContext) {
     throw new Error("Header must be rendered inside ThemeProvider");
