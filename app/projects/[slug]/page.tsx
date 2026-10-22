@@ -26,7 +26,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <h1>{project.name}</h1>
         <p>{project.summary}</p>
         <div className="case-tags"><span>{project.status}</span>{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-        {project.image && <figure className="case-visual"><img src={project.image} alt={project.imageAlt ?? `${project.name} visual evidence`} /><figcaption>Visual evidence supplied for this project. Screenshots demonstrate interface direction, not necessarily verified feature behavior.</figcaption></figure>}
+        {project.images && <div className="case-visual-grid">{project.images.map((image) => <figure className="case-visual" key={image.src}><img src={image.src} alt={image.alt} /><figcaption>Supplied visual evidence for {project.name}.</figcaption></figure>)}</div>}
       </div>
       <div className="detail-grid">
         <section><div className="section-kicker">Problem</div><h2>Why this work exists</h2><p>{project.problem}</p></section>
