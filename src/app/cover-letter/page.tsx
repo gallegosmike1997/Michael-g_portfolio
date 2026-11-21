@@ -7,125 +7,70 @@ export default function CoverLetterPage() {
   return (
     <>
       <Header />
-      <main
-        style={{
-          maxWidth: "800px",
-          margin: "0 auto",
-          padding: "40px 24px",
-          minHeight: "100vh",
-          lineHeight: "1.8",
-        }}
-      >
-        <div
-          style={{
-            marginBottom: "32px",
-            fontSize: "0.95rem",
-            color: "var(--text-muted)",
-          }}
-        >
-          <p>Hello, I hope my portfolio finds you in good spirits.</p>
-        </div>
-
-        <section style={{ marginBottom: "24px" }}>
-          <p>
-            I am a self taught multi-disciplinary engineer with a passion for designing and
-            building complete systems. My experience spans full-stack software
-            development, embedded systems, robotics, PCB design, AI integration,
-            and mechanical engineering. I approach every project with a focus on
-            reliability, clarity, and real-world performance.
+      <main className="cover-letter-page">
+        <header className="cover-letter-hero">
+          <p className="eyebrow">A personal note · Michael Gallegos</p>
+          <h1>Building things that bring the pieces together.</h1>
+          <p className="cover-letter-intro">
+            I&apos;m a self-taught, multidisciplinary engineer who loves turning
+            complicated ideas into things people can actually use. I&apos;m drawn
+            to the space where software, electronics, and the physical world
+            meet—and to the patient, hands-on work of making all of it work
+            together.
           </p>
-        </section>
+          <div className="cover-letter-capabilities" aria-label="Areas I can contribute">
+            <span>Full-stack &amp; AI applications</span>
+            <span>Embedded firmware &amp; STM32</span>
+            <span>PCB design &amp; integration</span>
+            <span>Robotics, drones &amp; flight tuning</span>
+            <span>CAD &amp; rapid prototyping</span>
+          </div>
+        </header>
 
-        <section style={{ marginBottom: "24px" }}>
+        <article className="cover-letter-story">
           <p>
-            Throughout my engineering journey, I have developed expertise across
-            interconnected domains:
+            I didn&apos;t come to engineering through just one door. I&apos;ve
+            learned by building—writing software, working with microcontrollers,
+            designing boards, shaping parts in CAD, and testing ideas in the
+            real world. Each discipline has taught me to look beyond the
+            immediate task and ask how the whole system will behave for the
+            person relying on it.
           </p>
-          <ul
-            style={{
-              listStyle: "none",
-              paddingLeft: "0",
-              marginTop: "12px",
-            }}
-          >
-            <li>
-              <strong>Software & Full-Stack:</strong> Python, Streamlit, React,
-              Next.js, and FastAPI for building scalable applications
-            </li>
-            <li>
-              <strong>Embedded Systems:</strong> STM32 microcontroller
-              programming, firmware development, and serial debugging
-            </li>
-            <li>
-              <strong>Hardware Design:</strong> PCB design in KiCad, electrical
-              systems integration, and diagnostic workflows
-            </li>
-            <li>
-              <strong>Robotics & Drones:</strong> End-to-end drone design
-              including mechanical CAD, electrical integration, flight
-              controller tuning, and real-world testing
-            </li>
-            <li>
-              <strong>AI & Automation:</strong> ONNX model integration, pipeline
-              optimization, and multi-modal system design
-            </li>
-            <li>
-              <strong>Mechanical Engineering:</strong> CAD design, additive
-              manufacturing, rapid prototyping, and assembly optimization
-            </li>
-            <li>
-              <strong>Systems Engineering:</strong> Multi-OS workflows (Windows,
-              Linux, WSL2), environment debugging, and integration testing
-            </li>
-          </ul>
-        </section>
-
-        <section style={{ marginBottom: "24px" }}>
           <p>
-            What sets me apart is my ability to work across the full stack—from
-            designing PCBs and writing firmware to building user interfaces and
-            optimizing deployment pipelines. I don't just work in silos; I
-            understand how mechanical systems integrate with electrical design,
-            how electrical systems require embedded firmware, and how firmware
-            must be debugged through software tooling. This holistic approach
-            enables me to identify and solve problems that span multiple
-            disciplines.
+            That perspective is what I bring to a team. I can move between a
+            user-facing application and the firmware or hardware beneath it, and
+            I enjoy finding the point where those pieces connect. When something
+            isn&apos;t working, I stay curious, work through the details, and keep
+            learning until I understand the problem—not just the symptom.
           </p>
-        </section>
 
-        <section style={{ marginBottom: "24px" }}>
+          <div className="cover-letter-capability-note">
+            <p className="eyebrow">What I can contribute today</p>
+            <p>
+              I can build web applications with Python, React, Next.js, and
+              FastAPI; integrate AI tools and models; develop STM32 firmware;
+              design KiCad PCBs; and take robotics or drone projects from CAD
+              and integration through testing. I&apos;m also comfortable
+              debugging across Windows, Linux, and WSL2 environments.
+            </p>
+          </div>
+
           <p>
-            I thrive in environments where I can take ownership of complex
-            problems and see projects through from conception to deployment. I
-            am highly self-directed, detail-oriented, and committed to
-            continuous learning. Whether debugging a multi-layered environment
-            issue, optimizing an AI pipeline, or bringing a drone from CAD to
-            flight-ready, I approach each challenge with rigor and clarity.
+            I care about making useful things, being someone a team can count
+            on, and staying open to what I still have to learn. I&apos;m looking
+            for a place where I can contribute across disciplines, take
+            ownership of meaningful problems, and grow alongside people who
+            care about doing thoughtful work.
           </p>
-        </section>
-
-        <section style={{ marginBottom: "24px" }}>
           <p>
-            I am excited about the opportunity to bring my multi-disciplinary
-            skills, problem-solving mindset, and engineering rigor to your team.
-            I am confident that my experience building complete systems will
-            enable me to contribute meaningfully to your organization's goals.
+            Thank you for taking the time to learn a little about me. I&apos;d be
+            glad to share more about my work and hear what your team is building.
           </p>
-        </section>
-
-        <section style={{ marginBottom: "32px" }}>
-          <p>Thank you for considering my application. I look forward to discussing how I can contribute to your team.</p>
-        </section>
-
-        <div
-          style={{
-            fontSize: "0.95rem",
-            color: "var(--text-muted)",
-          }}
-        >
-          <p>Sincerely,</p>
-          <p style={{ marginTop: "48px" }}>Michael Gallegos</p>
-        </div>
+          <div className="cover-letter-signoff">
+            <p>Warmly,</p>
+            <p className="cover-letter-signature">Michael Gallegos</p>
+          </div>
+        </article>
       </main>
       <Footer />
     </>
