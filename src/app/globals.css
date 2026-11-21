@@ -382,6 +382,134 @@ body[data-theme="light"] .upload-dropzone {
 }
 
 /* ---------------------------------------------------------
+   PERSONAL COVER LETTER
+--------------------------------------------------------- */
+.cover-letter-page {
+  max-width: 1040px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 76px) 24px;
+}
+
+.cover-letter-hero {
+  display: grid;
+  gap: 22px;
+  padding: clamp(28px, 6vw, 72px);
+  border: 1px solid rgba(201, 164, 107, 0.24);
+  border-radius: 24px;
+  background: linear-gradient(140deg, rgba(123, 30, 59, 0.22), rgba(8, 8, 14, 0.96));
+}
+
+.cover-letter-hero h1 {
+  max-width: 780px;
+  font-size: clamp(2.7rem, 7vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  color: #f5f5f7;
+}
+
+.cover-letter-intro {
+  max-width: 720px;
+  color: #d2d0d8;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.75;
+}
+
+.cover-letter-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.cover-letter-capabilities span {
+  padding: 9px 13px;
+  border: 1px solid rgba(201, 164, 107, 0.38);
+  border-radius: 999px;
+  color: #e2c895;
+  font-size: 0.85rem;
+}
+
+.cover-letter-story {
+  display: grid;
+  gap: 24px;
+  max-width: 740px;
+  margin: 40px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.cover-letter-story > p {
+  color: #ceccd5;
+}
+
+.cover-letter-capability-note {
+  display: grid;
+  gap: 12px;
+  padding: 24px 28px;
+  border-left: 3px solid #c9a46b;
+  border-radius: 0 14px 14px 0;
+  background: rgba(201, 164, 107, 0.08);
+}
+
+.cover-letter-capability-note .eyebrow {
+  margin: 0;
+}
+
+.cover-letter-capability-note > p:last-child {
+  color: #e0dde5;
+}
+
+.cover-letter-signoff {
+  margin-top: 8px;
+  color: #aaa8b4;
+}
+
+.cover-letter-signature {
+  margin-top: 8px;
+  color: #f5f5f7;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+body[data-theme="light"] .cover-letter-hero {
+  background: linear-gradient(140deg, #fff8f0, #ffffff);
+}
+
+body[data-theme="light"] .cover-letter-hero h1 {
+  color: #1a1a1f;
+}
+
+body[data-theme="light"] .cover-letter-intro,
+body[data-theme="light"] .cover-letter-story > p,
+body[data-theme="light"] .cover-letter-capability-note > p:last-child {
+  color: #41414c;
+}
+
+body[data-theme="light"] .cover-letter-capabilities span {
+  color: #632035;
+  border-color: rgba(123, 30, 59, 0.3);
+}
+
+body[data-theme="light"] .cover-letter-capability-note {
+  background: #fff8f0;
+}
+
+body[data-theme="light"] .cover-letter-signoff {
+  color: #555560;
+}
+
+body[data-theme="light"] .cover-letter-signature {
+  color: #1a1a1f;
+}
+
+@media (max-width: 600px) {
+  .cover-letter-page { padding: 24px 16px; }
+  .cover-letter-hero { padding: 28px 22px; border-radius: 18px; }
+  .cover-letter-capability-note { padding: 20px; }
+}
+
+/* ---------------------------------------------------------
    RESPONSIVE DESIGN
 --------------------------------------------------------- */
 @media (max-width: 900px) {
