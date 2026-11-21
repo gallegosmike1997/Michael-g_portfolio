@@ -397,7 +397,7 @@ body[data-theme="light"] .upload-dropzone {
   padding: clamp(28px, 6vw, 72px);
   border: 1px solid rgba(201, 164, 107, 0.24);
   border-radius: 24px;
-  background: linear-gradient(140deg, rgba(123, 30, 59, 0.22), rgba(8, 8, 14, 0.96));
+  background: linear-gradient(135deg, #7b1e3b 0%, #27101a 52%, #050509 100%);
 }
 
 .cover-letter-hero h1 {
@@ -472,23 +472,9 @@ body[data-theme="light"] .upload-dropzone {
   font-weight: 700;
 }
 
-body[data-theme="light"] .cover-letter-hero {
-  background: linear-gradient(140deg, #fff8f0, #ffffff);
-}
-
-body[data-theme="light"] .cover-letter-hero h1 {
-  color: #1a1a1f;
-}
-
-body[data-theme="light"] .cover-letter-intro,
 body[data-theme="light"] .cover-letter-story > p,
 body[data-theme="light"] .cover-letter-capability-note > p:last-child {
   color: #41414c;
-}
-
-body[data-theme="light"] .cover-letter-capabilities span {
-  color: #632035;
-  border-color: rgba(123, 30, 59, 0.3);
 }
 
 body[data-theme="light"] .cover-letter-capability-note {
